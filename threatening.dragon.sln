@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threatening.dragon.Api", "threatening.dragon.Api\threatening.dragon.Api.csproj", "{FB40EF86-CA2F-4E78-A8C4-70902F98EA22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threatening.dragon.Domain", "threatening.dragon.Domain\threatening.dragon.Domain.csproj", "{F27BBB03-DD53-496E-90C1-D86634323A3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB40EF86-CA2F-4E78-A8C4-70902F98EA22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB40EF86-CA2F-4E78-A8C4-70902F98EA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB40EF86-CA2F-4E78-A8C4-70902F98EA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB40EF86-CA2F-4E78-A8C4-70902F98EA22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27BBB03-DD53-496E-90C1-D86634323A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27BBB03-DD53-496E-90C1-D86634323A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27BBB03-DD53-496E-90C1-D86634323A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27BBB03-DD53-496E-90C1-D86634323A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
