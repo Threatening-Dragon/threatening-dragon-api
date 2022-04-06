@@ -10,6 +10,12 @@ namespace threatening.dragon.Data
         {  }
 
         public DbSet<Item> Items { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            DbInitializer.Initialize(builder);
+        }
     }
 }
 public class Class1
