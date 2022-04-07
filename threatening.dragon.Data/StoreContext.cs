@@ -1,4 +1,5 @@
 ﻿using threatening.dragon.Domain.Catalog;
+using threatening.dragon.Domain.Orders;
 using Microsoft.EntityFrameworkCore;
 
 namespace threatening.dragon.Data
@@ -11,6 +12,9 @@ namespace threatening.dragon.Data
 
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+    
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -18,7 +22,4 @@ namespace threatening.dragon.Data
         }
     }
 }
-public class Class1
-{
 
-}
