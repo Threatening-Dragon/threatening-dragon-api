@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threatening.dragon.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threatening.dragon.Data", "threatening.dragon.Data\threatening.dragon.Data.csproj", "{90E1118B-234F-4A03-A1FC-84DF467B6FB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8DADC3A3-6F4E-4E7D-BA77-61F3138DB18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threatening.dragon.Domain.Tests", "tests\threatening.dragon.Domain.Tests\threatening.dragon.Domain.Tests.csproj", "{1018386D-86AA-41C1-A7DD-B5049826858B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +38,12 @@ Global
 		{90E1118B-234F-4A03-A1FC-84DF467B6FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90E1118B-234F-4A03-A1FC-84DF467B6FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90E1118B-234F-4A03-A1FC-84DF467B6FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1018386D-86AA-41C1-A7DD-B5049826858B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1018386D-86AA-41C1-A7DD-B5049826858B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1018386D-86AA-41C1-A7DD-B5049826858B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1018386D-86AA-41C1-A7DD-B5049826858B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1018386D-86AA-41C1-A7DD-B5049826858B} = {8DADC3A3-6F4E-4E7D-BA77-61F3138DB18B}
 	EndGlobalSection
 EndGlobal
