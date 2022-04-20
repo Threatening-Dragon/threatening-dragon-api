@@ -11,7 +11,7 @@ using threatening.dragon.Data;
 namespace threatening.dragon.Api.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20220406230843_init")]
+    [Migration("20220418231044_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,44 @@ namespace threatening.dragon.Api.Migrations
                     b.ToTable("Rating");
                 });
 
+            modelBuilder.Entity("threatening.dragon.Domain.Orders.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("threatening.dragon.Domain.Orders.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderItem");
+                });
+
             modelBuilder.Entity("threatening.dragon.Domain.Catalog.Rating", b =>
                 {
                     b.HasOne("threatening.dragon.Domain.Catalog.Item", null)
@@ -97,9 +135,29 @@ namespace threatening.dragon.Api.Migrations
                         .HasForeignKey("ItemId");
                 });
 
+            modelBuilder.Entity("threatening.dragon.Domain.Orders.OrderItem", b =>
+                {
+                    b.HasOne("threatening.dragon.Domain.Catalog.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("threatening.dragon.Domain.Orders.Order", null)
+                        .WithMany("Items")
+                        .HasForeignKey("OrderId");
+
+                    b.Navigation("Item");
+                });
+
             modelBuilder.Entity("threatening.dragon.Domain.Catalog.Item", b =>
                 {
                     b.Navigation("Ratings");
+                });
+
+            modelBuilder.Entity("threatening.dragon.Domain.Orders.Order", b =>
+                {
+                    b.Navigation("Items");
                 });
 #pragma warning restore 612, 618
         }
