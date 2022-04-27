@@ -1,0 +1,32 @@
+### GET '/catalog' root with https
+GET https://localhost:7152/catalog
+
+### GET '/catalog' root with http
+GET http://localhost:3000/catalog
+
+### GET the Item for '/catalog' with Id of '2'
+GET https://localhost:7152/catalog/2
+
+
+### POST a new Item to the Catalog collection
+POST https://localhost:7152/catalog
+Content-Type: application/json
+
+{
+    "name": "Shoes",
+    "description": "Ohio State shoes",
+    "brand": "Nike",
+    "price": 129.99
+}
+
+### DELETE a Item to the Catalog collection
+curl --request DELETE \
+  --url https://localhost:7152/catalog/3 \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZHUDY5MXFmUDZIc1c5Mzd6aHlucCJ9.eyJpc3MiOiJodHRwczovL2Rldi1za280cHowZi51cy5hdXRoMC5jb20vIiwic3ViIjoiQXlsa3l4UnhiQmpUOFFEbk1PWjl6NWZnQWdMMGFjVWFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vdGhyZWF0ZW5pbmctZHJhZ29uIiwiaWF0IjoxNjUxMTAwOTk4LCJleHAiOjE2NTExODczOTgsImF6cCI6IkF5bGt5eFJ4YkJqVDhRRG5NT1o5ejVmZ0FnTDBhY1VhIiwic2NvcGUiOiJkZWxldGU6Y2F0YWxvZyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.ex-fWitd5C7cdeURlLtlId_2DDFjljZnRzUSuj3EMy-0ySnKqnP3ibGFAETxg_PWxJ2pEllDDJHQWdSpLs6aH-plZigJYKifPkpZq0XZ7XOcTMrOOocpMNmFHITQqN30nwnOtwPPFHR42WRROVT6BSvgUkO3rQzcfNqE6EGW3TIJgDSOfO6jZyXxQGSeF8aC4-zSl5MDu0CeV-Za5soeyTkN-rsbkGQ8Nt5c3vkpzV8SDdh-I8rp9ldDXvWZuM2pufSMHmlTQCPvykEEOVVLnEYYMppiMAtqAAdeiAP3i2bclzwhpUmeWnKX6rEr51PGSrYS6o0XbX_b9p_QZ-Td1Q'
+
+
+### GET token from Auth0
+ curl --request POST \
+  --url https://dev-sko4pz0f.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"AylkyxRxbBjT8QDnMOZ9z5fgAgL0acUa","client_secret":"CH66kXKVuVD2msxtB_Wke_gojIZWxGZTHiN1MVblSxEiC8bd8qf7s-HnVce7oBaL","audience":"https://threatening-dragon","grant_type":"client_credentials"}'
