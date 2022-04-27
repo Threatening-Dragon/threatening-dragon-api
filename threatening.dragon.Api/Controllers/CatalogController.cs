@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using threatening.dragon.Domain.Catalog;
 using threatening.dragon.Data;
 using Microsoft.EntityFrameworkCore;
+using threatening.dragon.Api.Security;
+using Microsoft.AspNetCore.Authorization;
 
 namespace threatening.dragon.Api.Controllers
 {
@@ -76,6 +78,7 @@ namespace threatening.dragon.Api.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult DeleteItem(int id)
         {
             var item = _db.Items.Find(id);
