@@ -45,7 +45,8 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000")
+        builder.WithOrigins("http://localhost:3000",
+            "https://polite-river-087640a0f.1.azurestaticapps.net")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
